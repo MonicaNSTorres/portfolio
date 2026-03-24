@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const links = [
   { href: "/#sobre", label: "Sobre" },
@@ -16,25 +16,13 @@ const links = [
 export function MobileMenu() {
   const [open, setOpen] = useState(false);
 
-  useEffect(() => {
-    if (open) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [open]);
-
   return (
     <>
       <button
         type="button"
         aria-label="Abrir menu"
         onClick={() => setOpen(true)}
-        className="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/5 p-2 text-white transition hover:bg-white/10 md:hidden"
+        className="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/5 p-2 text-white md:hidden"
       >
         <Menu className="h-5 w-5" />
       </button>
@@ -47,59 +35,45 @@ export function MobileMenu() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <div className="flex h-full flex-col">
-              <div className="flex items-center justify-between border-b border-white/10 px-6 py-5">
-                <span className="text-lg font-semibold text-white">
-                  Mônica Torres
-                </span>
+            <div className="flex items-center justify-between border-b border-white/10 px-6 py-5">
+              <span className="text-lg font-semibold text-white">
+                Mônica Torres
+              </span>
+              <button
+                type="button"
+                aria-label="Fechar menu"
+                onClick={() => setOpen(false)}
+                className="rounded-2xl border border-white/10 bg-white/5 p-2 text-white"
+              >
+                <X className="h-5 w-5" />
+              </button>
+            </div>
 
-                <button
-                  type="button"
-                  aria-label="Fechar menu"
-                  onClick={() => setOpen(false)}
-                  className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-white transition hover:bg-white/10"
-                >
-                  <X className="h-5 w-5" />
-                </button>
-              </div>
-
-              <div className="flex-1 overflow-y-auto px-6 py-8">
-                <div className="flex flex-col gap-4">
-                  {links.map((link, index) => (
-                    <motion.div
-                      key={link.href}
-                      initial={{ opacity: 0, y: 18 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 12 }}
-                      transition={{ delay: 0.05 * index }}
-                    >
-                      <Link
-                        href={link.href}
-                        onClick={() => setOpen(false)}
-                        className="block rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-base font-medium text-white transition hover:border-cyan-400/30 hover:bg-cyan-400/10 hover:text-cyan-300"
-                      >
-                        {link.label}
-                      </Link>
-                    </motion.div>
-                  ))}
-                </div>
-
+            <div className="flex flex-col gap-4 px-6 py-8 bg-slate-950">
+              {links.map((link, index) => (
                 <motion.div
+                  key={link.href}
                   initial={{ opacity: 0, y: 18 }}
                   animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 12 }}
-                  transition={{ delay: 0.3 }}
-                  className="mt-6"
+                  transition={{ delay: 0.05 * index }}
                 >
                   <Link
-                    href="/contato"
+                    href={link.href}
                     onClick={() => setOpen(false)}
-                    className="inline-flex w-full items-center justify-center rounded-2xl bg-linear-to-r from-cyan-400 to-sky-500 px-5 py-4 text-base font-semibold text-slate-950 shadow-[0_12px_30px_rgba(34,211,238,0.22)] transition hover:scale-[1.01]"
+                    className="block rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-base font-medium text-white"
                   >
-                    Vamos conversar
+                    {link.label}
                   </Link>
                 </motion.div>
-              </div>
+              ))}
+
+              <Link
+                href="/contato"
+                onClick={() => setOpen(false)}
+                className="mt-4 inline-flex items-center justify-center rounded-2xl bg-linear-to-r from-cyan-400 to-sky-500 px-5 py-4 font-semibold text-slate-950"
+              >
+                Vamos conversar
+              </Link>
             </div>
           </motion.div>
         ) : null}
