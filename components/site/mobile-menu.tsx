@@ -30,7 +30,7 @@ export function MobileMenu() {
       <AnimatePresence>
         {open ? (
           <motion.div
-            className="fixed inset-0 z-[60] bg-slate-950/95 backdrop-blur-xl md:hidden"
+            className="fixed inset-0 z-60 bg-slate-950/95 backdrop-blur-xl md:hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -70,7 +70,7 @@ export function MobileMenu() {
               <Link
                 href="/contato"
                 onClick={() => setOpen(false)}
-                className="mt-4 inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-cyan-400 to-sky-500 px-5 py-4 font-semibold text-slate-950"
+                className="mt-4 inline-flex items-center justify-center rounded-2xl bg-linear-to-r from-cyan-400 to-sky-500 px-5 py-4 font-semibold text-slate-950"
               >
                 Vamos conversar
               </Link>
