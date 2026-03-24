@@ -89,6 +89,7 @@ export const projects: ProjectItem[] = [
       "Experiência visual premium",
       "Base para chat com dados",
     ],
+    image: "/public/insightai.png",
     link: "#",
     github: "#",
     featured: true,
