@@ -89,9 +89,9 @@ export const projects: ProjectItem[] = [
       "Experiência visual premium",
       "Base para chat com dados",
     ],
-    image: "/public/insightai.png",
+    image: "/insightai.png",
     link: "#",
-    github: "#",
+    github: "https://github.com/MonicaNSTorres/Insight-AI",
     featured: true,
     seoDescription:
       "Projeto InsightAI: plataforma SaaS criada com Next.js, TypeScript e PostgreSQL para transformar planilhas em dashboards e insights automáticos.",
@@ -118,8 +118,9 @@ export const projects: ProjectItem[] = [
       "Integração com Oracle Database",
       "Arquitetura frontend + backend",
     ],
+    image: "/intranet.png",
     link: "#",
-    github: "#",
+    github: "https://github.com/MonicaNSTorres/Intranet-Cressem",
     featured: true,
     seoDescription:
       "Projeto de intranet corporativa com Next.js, Node.js, Express e Oracle, voltado para dashboards, consultas internas e produtividade operacional.",
@@ -146,6 +147,7 @@ export const projects: ProjectItem[] = [
       "Reaproveitamento de dados internos",
       "Melhoria do fluxo operacional",
     ],
+    image: "/docusign.png",
     link: "#",
     github: "#",
     seoDescription:
@@ -154,30 +156,49 @@ export const projects: ProjectItem[] = [
   {
     slug: "sistema-pmoc",
     title: "Sistema PMOC",
-    category: "Operacional • Documentos",
+    category: "SaaS Operacional • Gestão de Manutenção",
     shortDescription:
-      "Sistema com formulários técnicos, geração de PDF e organização operacional para padronizar rotinas e documentos.",
+      "Plataforma para gestão de PMOC, controle de ambientes e equipamentos com geração automática de relatórios.",
+
     description:
-      "Sistema criado para estruturar o fluxo de formulários PMOC, centralizar informações, facilitar geração de PDFs e organizar o processo operacional com mais padronização e menos retrabalho.",
+      "Sistema completo desenvolvido para empresas de climatização realizarem a gestão do PMOC (Plano de Manutenção, Operação e Controle) de forma digital. A plataforma centraliza ambientes, equipamentos, TAGs, checklists técnicos e gera automaticamente documentos e relatórios em PDF, reduzindo processos manuais e melhorando o controle operacional das manutenções.",
+
     problem:
-      "Processos documentais manuais e descentralizados aumentam erros, atrasos e dificultam a gestão dos registros.",
+      "Empresas de manutenção de ar condicionado frequentemente utilizam planilhas e documentos manuais para controlar PMOCs, checklists e relatórios técnicos. Esse processo descentralizado gera retrabalho, inconsistências em documentos e dificuldade para rastrear histórico de manutenção.",
+
     solution:
-      "Desenvolvi uma solução web com formulários, geração de documentos em PDF e estrutura pronta para listagem, consulta e continuidade do processo operacional.",
+      "Desenvolvi uma aplicação web que digitaliza todo o fluxo operacional do PMOC. O sistema permite cadastrar ambientes, equipamentos e TAGs, preencher formulários técnicos padronizados e gerar automaticamente relatórios em PDF prontos para auditorias e conformidade com normas técnicas.",
+
     impact:
-      "O projeto evidencia experiência com geração de documentos, modelagem de fluxo interno e criação de sistemas voltados para produtividade real.",
-    stack: ["Next.js", "TypeScript", "Tailwind CSS", "jsPDF", "APIs"],
-    features: [
-      "Formulários operacionais",
-      "Geração de PDF",
-      "Estrutura para consulta posterior",
-      "Organização de fluxo documental",
-      "Experiência web moderna",
+      "A solução reduz significativamente o tempo gasto na geração de documentos técnicos, melhora a organização das manutenções e cria um histórico estruturado de intervenções, permitindo maior controle operacional e rastreabilidade das atividades realizadas.",
+
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Prisma",
+      "PostgreSQL",
+      "jsPDF"
     ],
+
+    features: [
+      "Gestão de ambientes e unidades atendidas",
+      "Cadastro e organização de equipamentos por TAG",
+      "Formulários técnicos para manutenção PMOC",
+      "Checklists operacionais padronizados",
+      "Geração automática de relatórios em PDF",
+      "Histórico de manutenção por equipamento",
+      "Interface web responsiva e otimizada",
+      "Estrutura preparada para expansão como SaaS"
+    ],
+
+    image: "/pmoc.png",
     link: "#",
-    github: "#",
+    github: "https://github.com/MonicaNSTorres/pmoc",
+
     seoDescription:
-      "Sistema PMOC desenvolvido com Next.js e TypeScript para formulários técnicos, geração de PDF e organização de fluxos operacionais.",
-  },
+      "Sistema PMOC desenvolvido com Next.js, TypeScript e PostgreSQL para gestão de manutenção de ar condicionado, geração automática de relatórios técnicos e organização operacional."
+  }
 ];
 
 export const techGroups: TechGroup[] = [

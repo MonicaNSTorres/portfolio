@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -117,14 +118,26 @@ export default async function ProjetoDetalhePage({
           </Reveal>
 
           <Reveal delay={0.08}>
-            <div className="rounded-4x1 border border-white/10 bg-white/5 p-6">
-              <div className="rounded-3x1 border border-white/10 bg-linear-to-br from-slate-900 via-slate-800 to-slate-900 p-8">
-                <div className="rounded-[22px] border border-cyan-400/15 bg-slate-950/80 p-5">
-                  <div className="h-3 w-1/3 rounded-full bg-white/10" />
-                  <div className="mt-4 h-3 w-2/3 rounded-full bg-white/10" />
-                  <div className="mt-4 h-28 rounded-2xl bg-linear-to-r from-cyan-500/10 via-sky-500/10 to-violet-500/10" />
-                  <div className="mt-4 h-3 w-1/2 rounded-full bg-white/10" />
-                </div>
+            <div className="rounded-[28px] border border-white/10 bg-white/5 p-6">
+              <div className="overflow-hidden rounded-3x1 border border-white/10 bg-linear-to-br from-slate-900 via-slate-800 to-slate-900 p-8">
+                {project.image ? (
+                  <div className="relative h-85 overflow-hidden rounded-[22px] border border-cyan-400/15 bg-slate-950/80">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover"
+                      priority
+                    />
+                  </div>
+                ) : (
+                  <div className="rounded-[22px] border border-cyan-400/15 bg-slate-950/80 p-5">
+                    <div className="h-3 w-1/3 rounded-full bg-white/10" />
+                    <div className="mt-4 h-3 w-2/3 rounded-full bg-white/10" />
+                    <div className="mt-4 h-28 rounded-2xl bg-linear-to-r from-cyan-500/10 via-sky-500/10 to-violet-500/10" />
+                    <div className="mt-4 h-3 w-1/2 rounded-full bg-white/10" />
+                  </div>
+                )}
               </div>
             </div>
           </Reveal>

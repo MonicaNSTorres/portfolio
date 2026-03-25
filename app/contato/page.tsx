@@ -45,12 +45,12 @@ export default function ContatoPage() {
                   </div>
                   <div>
                     <p className="font-medium text-white">E-mail</p>
-                    <p className="text-sm text-slate-300">SEUEMAIL@EMAIL.COM</p>
+                    <p className="text-sm text-slate-300">monicanstorress@gmail.com</p>
                   </div>
                 </a>
 
                 <a
-                  href="https://wa.me/5512982805148"
+                  href="https://wa.me/5512982805148?text=Olá%20Mônica,%20vim%20pelo%20seu%20portfólio%20e%20quero%20falar%20sobre%20um%20projeto."
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center gap-4 rounded-3xl border border-white/10 bg-white/5 p-5 transition hover:bg-white/8"
@@ -65,7 +65,7 @@ export default function ContatoPage() {
                 </a>
 
                 <a
-                  href="SEU_LINK_LINKEDIN"
+                  href="https://www.linkedin.com/in/m%C3%B4nica-torres-198875149?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center gap-4 rounded-3xl border border-white/10 bg-white/5 p-5 transition hover:bg-white/8"
@@ -80,7 +80,7 @@ export default function ContatoPage() {
                 </a>
 
                 <a
-                  href="SEU_LINK_GITHUB"
+                  href="https://github.com/MonicaNSTorres/"
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center gap-4 rounded-3xl border border-white/10 bg-white/5 p-5 transition hover:bg-white/8"

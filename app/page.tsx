@@ -37,7 +37,7 @@ export default function HomePage() {
             </div>
 
             <h1 className="mt-6 text-4xl font-bold leading-tight text-white md:text-6xl">
-              Eu desenvolvo
+              Desenvolvo
               <span className="bg-linear-to-r from-cyan-300 via-sky-400 to-violet-400 bg-clip-text text-transparent">
                 {" "}
                 sistemas web premium
@@ -364,7 +364,7 @@ export default function HomePage() {
 
                 <div className="mt-8 flex flex-wrap gap-4">
                   <a
-                    href="mailto:seuemail@exemplo.com"
+                    href="mailto:monicanstorress@gmail.com"
                     className="inline-flex items-center gap-2 rounded-2xl bg-linear-to-r from-cyan-400 to-sky-500 px-6 py-3 font-semibold text-slate-950 transition hover:scale-[1.02]"
                   >
                     <Mail className="h-4 w-4" />
@@ -372,7 +372,7 @@ export default function HomePage() {
                   </a>
 
                   <a
-                    href="https://www.linkedin.com"
+                    href="https://www.linkedin.com/in/m%C3%B4nica-torres-198875149?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
                     target="_blank"
                     rel="noreferrer"
                     className="inline-flex items-center gap-2 rounded-2xl border border-white/15 px-6 py-3 font-semibold text-white transition hover:bg-white/5"
@@ -382,7 +382,7 @@ export default function HomePage() {
                   </a>
 
                   <a
-                    href="https://github.com"
+                    href="https://github.com/MonicaNSTorres/"
                     target="_blank"
                     rel="noreferrer"
                     className="inline-flex items-center gap-2 rounded-2xl border border-white/15 px-6 py-3 font-semibold text-white transition hover:bg-white/5"
@@ -422,13 +422,13 @@ export default function HomePage() {
           <p>© {new Date().getFullYear()} Mônica Torres. Todos os direitos reservados.</p>
 
           <div className="flex items-center gap-5">
-            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" className="transition hover:text-white">
+            <a href="https://www.linkedin.com/in/m%C3%B4nica-torres-198875149?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noreferrer" className="transition hover:text-white">
               LinkedIn
             </a>
-            <a href="https://github.com" target="_blank" rel="noreferrer" className="transition hover:text-white">
+            <a href="https://github.com/MonicaNSTorres/" target="_blank" rel="noreferrer" className="transition hover:text-white">
               GitHub
             </a>
-            <a href="mailto:seuemail@exemplo.com" className="transition hover:text-white">
+            <a href="mailto:monicanstorress@gmail.com" className="transition hover:text-white">
               E-mail
             </a>
           </div>
