@@ -6,6 +6,7 @@ import { ArrowLeft, ArrowRight, Globe } from "lucide-react";
 import { SiteHeader } from "@/components/site/header";
 import { Reveal } from "@/components/site/reveal";
 import { projects } from "@/lib/portfolio-data";
+import { ProjectGallery } from "@/components/site/project-gallery";
 
 type ProjectPageProps = {
   params: Promise<{
@@ -171,6 +172,14 @@ export default async function ProjetoDetalhePage({
             </div>
           </Reveal>
         </div>
+
+        {project.gallery?.length ? (
+          <div className="mt-16">
+            <Reveal>
+              <ProjectGallery title={project.title} images={project.gallery} />
+            </Reveal>
+          </div>
+        ) : null}
 
         <div className="mt-16 grid gap-8 lg:grid-cols-[1fr_0.9fr]">
           <Reveal>

@@ -27,6 +27,7 @@ export type ProjectItem = {
   stack: string[];
   features: string[];
   image?: string;
+  gallery?: string[];
   link: string;
   github: string;
   featured?: boolean;
@@ -90,6 +91,12 @@ export const projects: ProjectItem[] = [
       "Base para chat com dados",
     ],
     image: "/insightai.png",
+    gallery: [
+      "/insightai.png",
+      "/intranet.png",
+      "/insightai.png",
+      "/insightai.png",
+    ],
     link: "#",
     github: "https://github.com/MonicaNSTorres/Insight-AI",
     featured: true,
@@ -119,11 +126,60 @@ export const projects: ProjectItem[] = [
       "Arquitetura frontend + backend",
     ],
     image: "/intranet.png",
+    gallery: [
+      "/insightai.png",
+      "/intranet.png",
+      "/insightai.png",
+      "/insightai.png",
+    ],
     link: "#",
     github: "https://github.com/MonicaNSTorres/Intranet-Cressem",
     featured: true,
     seoDescription:
       "Projeto de intranet corporativa com Next.js, Node.js, Express e Oracle, voltado para dashboards, consultas internas e produtividade operacional.",
+  },
+  {
+    slug: "site-dra-tauana",
+    title: "Site Médico • Dra. Tauana Brógio Leão",
+    category: "Website • Healthcare",
+    shortDescription:
+      "Website institucional desenvolvido para uma endocrinologista com foco em conversão de pacientes, presença digital e posicionamento profissional.",
+    description:
+      "Projeto de website profissional desenvolvido para a endocrinologista Dra. Tauana Brógio Leão. O objetivo foi criar uma presença digital moderna, elegante e confiável para atrair novos pacientes, apresentar especialidades médicas e facilitar o contato direto via WhatsApp.",
+    problem:
+      "Profissionais da saúde muitas vezes dependem apenas de redes sociais ou perfis em plataformas médicas, o que limita sua presença digital, autoridade profissional e capacidade de atrair novos pacientes de forma orgânica.",
+    solution:
+      "Desenvolvi um site moderno, responsivo e otimizado para SEO utilizando Next.js e Tailwind CSS. A estrutura foi pensada para destacar especialidades, transmitir confiança ao paciente e facilitar o agendamento de consultas.",
+    impact:
+      "O resultado foi um website leve, elegante e otimizado para conversão, fortalecendo a presença digital da médica e aumentando o potencial de captação de novos pacientes.",
+    stack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "SEO",
+      "Responsive Design"
+    ],
+    features: [
+      "Design premium focado em experiência do paciente",
+      "Layout totalmente responsivo",
+      "Estrutura otimizada para SEO",
+      "Integração direta com WhatsApp",
+      "Páginas de especialidades médicas",
+      "Performance otimizada para carregamento rápido"
+    ],
+    image: "/site-dra-tauana.png",
+    gallery: [
+      "/site-dra-tauana.png",
+      "/site-dra-tauana.png",
+      "/site-dra-tauana.png",
+      "/site-dra-tauana.png"
+    ],
+    link: "https://tauana-le-o.vercel.app/",
+    github: "#",
+    featured: true,
+    seoDescription:
+      "Website profissional desenvolvido em Next.js para endocrinologista, com foco em SEO, conversão de pacientes e experiência moderna."
   },
   {
     slug: "dashboard-docusign",
